@@ -2,7 +2,7 @@ const { stringLength, reverseStr, capsFirstLetter } = require('./string.js');
 
 describe('String length function', () => {
   test('should be length is between 1 and 10', () => {
-    const str = 'Genesis';
+    const str = 'Foga';
     const len = str.length;
     expect(stringLength(str)).toBe(len);
   });
