@@ -1,40 +1,40 @@
 const { stringLength, reverseStr, capsFirstLetter } = require('./string.js');
 
 describe('String length function', () => {
-  test('should be length is between 1 and 10', () => {
+  it('should be length is between 1 and 10', () => {
     const str = 'Foga';
     const len = str.length;
     expect(stringLength(str)).toBe(len);
   });
 
-  test('should be length less than 1', () => {
+  it('should be length less than 1', () => {
     const str = '';
     const error = 'Str not between 1 and 10';
     expect(stringLength(str)).toBe(error);
   });
 
-  test('should be length greater than 10', () => {
-    const str = 'Smoothing Cleanser';
+  it('should be length greater than 10', () => {
+    const str = 'coding is fun';
     const error = 'Str not between 1 and 10';
     expect(stringLength(str)).toBe(error);
   });
 });
 
 describe('String reverse function', () => {
-  test('should be reversed', () => {
-    const str = 'Hello';
-    expect(reverseStr(str)).toBe('olleH');
+  it('should be reversed', () => {
+    const str = 'rabu';
+    expect(reverseStr(str)).toBe('ubar');
   });
 });
 
 describe('First letter uppercase', () => {
   it('should be first letter uppercase', () => {
-    const str = 'tegs';
-    expect(capsFirstLetter(str)).toBe('Tegs');
+    const str = 'foga';
+    expect(capsFirstLetter(str)).toBe('Foga');
   });
 
   it('should not be first letter uppercase', () => {
-    const str = 'tegs';
-    expect(capsFirstLetter(str)).not.toBe('tegs');
+    const str = 'foga';
+    expect(capsFirstLetter(str)).not.toBe('foga');
   });
 });
